@@ -3,12 +3,12 @@ import pandas as pd
 import folium
 from streamlit_folium import folium_static
 from folium.plugins import MarkerCluster
-import sys
-sys.path.append('C:/Users/User/Documents/jobs/projeto_out/scripts')
+#import sys
+#sys.path.append('C:/Users/User/Documents/jobs/projeto_out/scripts')
 from similar import *
 
 st.title('Teste Similaridade')
-df = pd.read_csv('C:/Users/User/Documents/jobs/projeto_out/datasets/base_nit.csv')
+df = pd.read_csv('base_nit.csv')
 
 raio = [200,300,400,500]
 min_ = [0.80, 0.85, 0.90, 0.95]
