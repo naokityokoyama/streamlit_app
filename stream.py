@@ -16,7 +16,8 @@ df = df.drop(df[query].index).reset_index(drop=True)
 similaridade = [0.5, 0.1, 0.2, 0.3, 0.4, 1, 1.5]
 
 st.sidebar.header('Filtros')
-selecione_amostra = st.sidebar.selectbox('Selecione Amostra', range(0,200))
+selecione_amostra = st.sidebar.selectbox('Selecione Amostra (amostra selecionada leva em consideração (localização,  \
+        numero de quartos e numero de vagas))', range(0,200))
 
 selecione_similaridade = st.sidebar.selectbox('Selecione Similaridade - Menor mais Similar', similaridade)
 
