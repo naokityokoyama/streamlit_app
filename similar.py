@@ -50,11 +50,11 @@ def similar(dataset , num, s=None, raio=200, similar=0.5):
     if s == 1:
         return data
     else:    
-        data['euclidian'] = euclidian(data, num)
+        data['id1'] = euclidian(data, num)
         dataset = dataset.loc[data.index]
-        dataset['euclidian'] = data['euclidian']
+        dataset['id1'] = data['id1']
         
-        data['manhattan'] = manhattan(data, num)
+        data['id2'] = manhattan(data, num)
         dataset = dataset.loc[data.index]
-        dataset['manhattan'] = data['manhattan']
-        return dataset[dataset['euclidian']<=similar].sort_values(by='euclidian')    
+        dataset['id2'] = data['id2']
+        return dataset[dataset['id1']<=similar].sort_values(by='id1')    
