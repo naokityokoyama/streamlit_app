@@ -18,10 +18,7 @@ similaridade = [0.5, 0.1, 0.2, 0.3, 0.4, 1, 1.5]
 st.sidebar.header('Filtros')
 selecione_amostra = st.sidebar.selectbox('Selecione Amostra', range(0,200))
 
-amostra = df.loc[selecione_amostra]
-localizacao = df[['original_address_latitude','original_address_longitude']].values.tolist()
-
-selecione_similaridade = st.sidebar.selectbox('Selecione Similaridade', similaridade)
+selecione_similaridade = st.sidebar.selectbox('Selecione Similaridade - Menor mais Similar', similaridade)
 
 data = similar(df, selecione_amostra, similar=selecione_similaridade)
 #checkbox
