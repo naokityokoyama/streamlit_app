@@ -17,6 +17,8 @@ similaridade = [0.5, 0.1, 0.2, 0.3, 0.4, 1, 1.5]
 
 st.sidebar.header('Filtros')
 st.sidebar.write('Area, Quartos , Vagas e Localizacao')
+st.sidebar.write('Amostra selecionada como se fosse inputado de forma externa onde somente as caracteristicas acima \
+sao levadas em consideracao')
 selecione_amostra = st.sidebar.selectbox('Selecione Amostra', range(0,200))
 
 selecione_similaridade = st.sidebar.selectbox('Selecione Similaridade - Menor mais Similar', similaridade)
